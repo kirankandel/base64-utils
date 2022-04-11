@@ -1,0 +1,24 @@
+{
+  "name": "base64-utils",
+  "version": "1.0.0",
+  "description": "Provides functionalities related to Base64",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imtheknown/base64-utils.git"
+  },
+  "keywords": [
+    "base64",
+    "mimetype",
+    "base64-utils"
+  ],
+  "author": "Kiran Kandel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imtheknown/base64-utils/issues"
+  },
+  "homepage": "https://github.com/imtheknown/base64-utils#readme"
+}
