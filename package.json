@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Provides functionalities related to Base64",
   "main": "index.js",
+  "files": ["lib/**/*"],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,11 @@
   "bugs": {
     "url": "https://github.com/imtheknown/base64-utils/issues"
   },
-  "homepage": "https://github.com/imtheknown/base64-utils#readme"
+  "homepage": "https://github.com/imtheknown/base64-utils#readme",
+  "devDependencies": {
+    "prettier": "^2.6.2",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.6.3"
+  }
 }
