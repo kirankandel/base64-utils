@@ -35,4 +35,4 @@ Tries to read mimetype of a base64 string, returns mimetype if found, otherwise 
 ```js
 base64Utils.getMimeType("data:image/png;base64,iUgAAAAUAAAAF=="); //returns "image/png"
 
-base64Utils.isValidBase64("SGVsbG8gV29ybGQ="); //returns ""
+base64Utils.getMimeType("SGVsbG8gV29ybGQ="); //returns ""
