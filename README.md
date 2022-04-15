@@ -15,6 +15,8 @@ Work On Progress
 
  ```js
  const base64Utils = require("base64-utils");
+//or
+import * as base64Utils from "base64-utils"
 ```
 
 ## API
