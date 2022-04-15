@@ -1,6 +1,6 @@
 {
   "name": "base64-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provides functionalities related to Base64",
   "main": "lib/index.js",
   "files": [
