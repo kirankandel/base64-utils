@@ -23,7 +23,14 @@ Work On Progress
 Checks if the base64 string is valid.
 
 ```js
-isValidBase64("SGVsbG8gV29ybGQ"); //returns false
+base64Utils.isValidBase64("SGVsbG8gV29ybGQ"); //returns false
 
-isValidBase64("SGVsbG8gV29ybGQ="); //returns true
+base64Utils.isValidBase64("SGVsbG8gV29ybGQ="); //returns true
 ```
+### getMimeType
+Tries to read mimetype of a base64 string, returns mimetype if found, otherwise returns a empty string.
+
+```js
+base64Utils.getMimeType("data:image/png;base64,iUgAAAAUAAAAF=="); //returns "image/png"
+
+base64Utils.isValidBase64("SGVsbG8gV29ybGQ="); //returns ""

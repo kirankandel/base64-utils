@@ -6,3 +6,12 @@ export function isValidBase64(str: string): boolean {
     return false;
   }
 }
+
+// find mime type from base64 string
+export function getMimeType(str: string): string {
+  const mime = str.match(/data:([a-zA-Z0-9]+\/[a-zA-Z0-9-.+]+).*,.*/);
+  if (mime && mime.length) {
+    return mime[1];
+  }
+  return '';
+}
