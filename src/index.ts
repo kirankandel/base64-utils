@@ -15,3 +15,23 @@ export function getMimeType(str: string): string {
   }
   return '';
 }
+
+//convert base64 to buffer
+export function base64ToBuffer(str: string): Buffer {
+  return Buffer.from(str, 'base64');
+}
+
+// convert base64 to utf8 string
+export function base64ToUtf8(str: string): string {
+  return base64ToBuffer(str).toString('utf8');
+}
+
+// convert base64 to hex string
+export function base64ToHex(str: string): string {
+  return base64ToBuffer(str).toString('hex');
+}
+
+// convert base64 to binary string
+export function base64ToBinary(str: string): string {
+  return base64ToBuffer(str).toString('binary');
+}
