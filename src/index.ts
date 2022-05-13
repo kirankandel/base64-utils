@@ -35,3 +35,8 @@ export function base64ToHex(str: string): string {
 export function base64ToBinary(str: string): string {
   return base64ToBuffer(str).toString('binary');
 }
+
+//convert buffer to base64 string
+export function bufferToBase64(buffer: Buffer): string {
+  return buffer.toString('base64');
+}
