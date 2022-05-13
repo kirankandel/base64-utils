@@ -35,7 +35,7 @@ base64Utils.getMimeType("data:image/png;base64,iUgAAAAUAAAAF=="); //returns "ima
 
 base64Utils.getMimeType("SGVsbG8gV29ybGQ="); //returns ""
 ```
-### Conversion Methods
+### Conversion Methods from Base64
 To Convert Base64 String to different data formats
 
 ```js
@@ -47,4 +47,12 @@ base64Utils.base64ToUtf8("SGVsbG8gV29ybGQ=");
 base64Utils.base64ToHex("SGVsbG8gV29ybGQ="); 
 //Convert Base64 to Binary
 base64Utils.base64ToBinary("SGVsbG8gV29ybGQ=");   
+```
+
+### Conversion Methods To Base64
+To Convert different formats to base64 String
+
+```js
+//Convert Base64 to Buffer
+base64Utils.bufferToBase64(Buffer); 
 ```
