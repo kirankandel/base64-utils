@@ -1,7 +1,7 @@
 
 # Base64 Utils
 
-Utility module to perform various operations on a base64 string
+Utility module to perform various operations on a base64 string, has features to convert image to base64 string.
 
 ## Installation
 
