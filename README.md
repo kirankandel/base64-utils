@@ -56,3 +56,14 @@ To Convert different formats to base64 String
 //Convert Base64 to Buffer
 base64Utils.bufferToBase64(Buffer); 
 ```
+### Convert Image To Base64
+
+To convert image to base64 encoded string
+
+```js
+//Convert image to base64 asynchronously 
+base64Utils.imageToBase64(imagePath).then(data => console.log(data));
+
+//Convert image to base64 synchronously 
+base64Utils.imageToBase64Sync(imagePath);
+```
