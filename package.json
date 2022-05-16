@@ -19,7 +19,9 @@
   "keywords": [
     "base64",
     "mimetype",
-    "base64-utils"
+    "base64-utils",
+    "image to base64",
+    "iamge to url"
   ],
   "author": "Kiran Kandel",
   "license": "MIT",
