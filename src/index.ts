@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+
 // validate a base64 string
 export function isValidBase64(str: string): boolean {
   try {
@@ -39,4 +41,22 @@ export function base64ToBinary(str: string): string {
 //convert buffer to base64 string
 export function bufferToBase64(buffer: Buffer): string {
   return buffer.toString('base64');
+}
+
+// convert image to base64 string
+export function imageToBase64(path: string): Promise<string> {
+  return new Promise((resolve, reject) => {
+    fs.readFile(path, (err, data) => {
+      if (err) {
+        reject(err);
+        return;
+      }
+      resolve(data.toString('base64'));
+    });
+  });
+}
+
+// convert image to base64 string synchronously
+export function imageToBase64Sync(path: string): string {
+  return fs.readFileSync(path).toString('base64');
 }
