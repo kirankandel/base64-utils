@@ -3,6 +3,8 @@
 
 Utility module to perform various operations on a base64 string, has features to convert image to base64 string.
 
+## Release Notes
+*   Added support for conversion of images to base64 string.
 ## Installation
 
 ```
@@ -31,7 +33,14 @@ base64Utils.isValidBase64("SGVsbG8gV29ybGQ="); //returns true
 Tries to read mimetype of a base64 string, returns mimetype if found, otherwise returns a empty string.
 
 ```js
-base64Utils.getMimeType("data:image/png;base64,iUgAAAAUAAAAF=="); //returns "image/png"
+base64Utils.getMimeTypeBySignature("data:image/png;base64,iUgAAAAUAAAAF=="); //returns "image/png"
+
+base64Utils.getMimeTypeBySignature("SGVsbG8gV29ybGQ="); //returns ""
+```
+
+To get MimeType by reading string, and seeing string pattern, this is currently only available for pdf, png, jpg and gif.
+```js
+base64Utils.getMimeType("iUgAAAAUAAAAF=="); //returns "image/png"
 
 base64Utils.getMimeType("SGVsbG8gV29ybGQ="); //returns ""
 ```

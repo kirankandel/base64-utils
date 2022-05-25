@@ -1,5 +1,13 @@
 import * as fs from 'fs';
 
+//Magic numbers to detect mimeType
+const signatures = {
+  JVBERi0: "application/pdf",
+  R0lGODdh: "image/gif",
+  R0lGODlh: "image/gif",
+  iVBORw0KGgo: "image/png",
+  "/9j/": "image/jpg"
+}
 // validate a base64 string
 export function isValidBase64(str: string): boolean {
   try {
@@ -10,7 +18,7 @@ export function isValidBase64(str: string): boolean {
 }
 
 // find mime type from base64 string
-export function getMimeType(str: string): string {
+export function getMimeTypeBySignature(str: string): string {
   const mime = str.match(/data:([a-zA-Z0-9]+\/[a-zA-Z0-9-.+]+).*,.*/);
   if (mime && mime.length) {
     return mime[1];
@@ -59,4 +67,11 @@ export function imageToBase64(path: string): Promise<string> {
 // convert image to base64 string synchronously
 export function imageToBase64Sync(path: string): string {
   return fs.readFileSync(path).toString('base64');
+}
+
+export function getMimeType(str: string): string {
+  for (var s in signatures) {
+    if (str.indexOf(s) === 0) return (signatures as any)[s];
+  }
+  return '';
 }
